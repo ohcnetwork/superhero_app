@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context="kerala.superhero.app.login.LoginActivity">
+
+        <ImageView
+            android:id="@+id/mainLogoImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/tracker_signal"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/logo" />
+
+        <EditText
+            android:id="@+id/resetPasswordPhoneNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainLogoImage"
+            android:layout_marginTop="50dp"
+            android:autofillHints="phone"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:padding="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:layout_marginTop="24dp"
+            android:padding="16dp"
+            android:layout_below="@id/resetPasswordPhoneNumberEditText"
+            android:id="@+id/resetPasswordEditText"
+            android:inputType="textPassword"
+            android:autofillHints="password"
+            android:background="@drawable/edittext_background"
+            />
+
+        <TextView
+            android:id="@+id/forgotPasswordLink"
+            android:layout_below="@id/resetPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/button_primary"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <LinearLayout
+            android:id="@+id/loginButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:layout_below="@id/forgotPasswordLink"
+            tools:ignore="UseCompoundDrawables">
+            <TextView
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:textColor="@color/button_primary"
+                android:gravity="center"
+                android:textSize="20sp"
+                />
+            <ImageView
+                android:id="@+id/loginButtonImage"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:src="@drawable/login_rounded_right"
+                android:contentDescription="@string/login_icon" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/signUpLink"
+            android:layout_below="@id/loginButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:padding="16dp"
+            android:textColor="@color/button_primary"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="kerala.superhero.app.login.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context="kerala.superhero.app.signup.SignUpActivity">
+
+        <TextView
+            android:id="@+id/loginLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/login"
+            android:textColor="@color/button_primary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/signupTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/sign_up"
+            android:textColor="#000"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signupTextView"
+            android:layout_marginTop="25dp"
+        android:importantForAutofill="no"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/resetPasswordPhoneNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameEditText"
+            android:layout_marginTop="25dp"
+            android:importantForAutofill="no"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/secondaryPhoneNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resetPasswordPhoneNumberEditText"
+            android:layout_marginTop="25dp"
+            android:importantForAutofill="no"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/secondary_phone_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondaryPhoneNumberEditText"
+            android:layout_marginTop="24dp"
+            android:importantForAutofill="no"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/resetPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailEditText"
+            android:layout_marginTop="24dp"
+            android:importantForAutofill="no"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/registrationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resetPasswordEditText"
+            android:layout_marginTop="24dp"
+            android:importantForAutofill="no"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/registration_number"
+            android:inputType="textCapCharacters"
+            android:maxLength="10"
+            android:padding="16dp" />
+
+
+        <TextView
+            android:id="@+id/groupTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/registrationEditText"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edittext_background"
+            android:drawableEnd="@drawable/drop_down"
+            android:hint="@string/select_asset_group"
+            android:padding="16dp"
+            android:textColor="#000" />
+
+
+        <TextView
+            android:id="@+id/categoryTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/groupTextView"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edittext_background"
+            android:drawableEnd="@drawable/drop_down"
+            android:enabled="false"
+            android:hint="@string/select_asset_category"
+            android:padding="16dp"
+            android:textColor="#000" />
+
+
+        <LinearLayout
+            android:id="@+id/sub_assets_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryTextView"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:drawableEnd="@drawable/drop_down"
+                android:hint="@string/select_state"
+                android:padding="16dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/districtTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_background"
+                android:drawableEnd="@drawable/drop_down"
+                android:hint="@string/select_district"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/panchayathTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_background"
+                android:drawableEnd="@drawable/drop_down"
+                android:enabled="false"
+                android:hint="@string/select_panchayath"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/wardTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_background"
+                android:drawableEnd="@drawable/drop_down"
+                android:enabled="false"
+                android:hint="@string/select_ward"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/registerButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sub_assets_container"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/signUpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="16dp"
+                android:text="@string/register"
+                android:textColor="@color/button_primary"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/signupButtonImage"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/login_icon"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:src="@drawable/tick" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

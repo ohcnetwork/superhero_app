@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kerala.superhero.app.home.HomeActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/serviceRequestsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/request_card"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/onBoardingInstructionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="48dp"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/allClearImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/allclear"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/all_clear_icon" />
+        <TextView
+            android:id="@+id/noRequestsTextView"
+            android:layout_below="@id/allClearImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_requests"
+            />
+        <TextView
+            android:id="@+id/onBoardingTextView"
+            android:layout_below="@id/noRequestsTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="@string/onboarding_instructions"
+            />
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_below="@id/onBoardingTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            >
+            <LinearLayout
+                android:id="@+id/locationServiceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/maps"
+                    android:contentDescription="@string/location_service_image" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/location"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/cellularServiceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="24dp"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/cellular"
+                    android:contentDescription="@string/cellullar_image" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/_3g_4g"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/lastLocationUpdateTextView"
+            android:layout_above="@id/refreshImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/last_location_update"
+            tools:text="Your location was last updated at 21/03/2020 05:10 PM. Click to update now."
+            />
+        <ImageView
+            android:id="@+id/refreshImageView"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/refresh"
+            android:contentDescription="@string/refresh_icon" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

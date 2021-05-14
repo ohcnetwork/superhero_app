@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="kerala.superhero.app.home.RequestDetailsActivity">
+
+    <TextView
+        android:id="@+id/collectionPointTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        tools:text="Pickup: Kanjoor Church"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="24sp"
+        android:textColor="#000"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        >
+        <ImageView
+            android:id="@+id/navigateButtonImage"
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/nav"
+            android:contentDescription="@string/login_icon" />
+        <TextView
+            android:id="@+id/navigateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@string/navigate"
+            android:textColor="@color/button_primary"
+            />
+        <ImageView
+            android:id="@+id/callButtonImage"
+            android:layout_width="18dp"
+            android:layout_marginStart="8dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/call"
+            android:contentDescription="@string/login_icon" />
+        <TextView
+            android:id="@+id/callTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@string/call"
+            android:textColor="@color/button_primary"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/actionButtonLayoutDivider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="16dp"
+        android:background="#989797" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/landmarksRecyclerView"
+        tools:listitem="@layout/landmark_list_item"
+        tools:itemCount="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="48dp"
+    android:layout_marginBottom="48dp"
+    app:cardBackgroundColor="#FFF"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/actionButtonLayout"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/your_ride"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/pickup" />
+
+                <TextView
+                    android:id="@+id/pickupAddressTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:text="Viswajyothi CMI Public School, Angamaly" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/destination" />
+
+                <TextView
+                    android:id="@+id/destinationAddressTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:text="Rajagiri Hospital, Aluva" />
+
+                <TextView
+                    android:id="@+id/destinationNumberLabelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/destination_phone"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/destinationCallButtonImage"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/login_icon"
+                        android:src="@drawable/call"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/destinationNumberTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6sp"
+                        android:maxLength="13"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        tools:text="9876543210"
+                        tools:visibility="visible" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/supportNumberLabelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/support_phone"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/supportCallButtonImage"
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/login_icon"
+                        android:src="@drawable/call"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/supportNumberTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6sp"
+                        android:maxLength="13"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        tools:text="0123456789"
+                        tools:visibility="visible" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/time" />
+
+                <TextView
+                    android:id="@+id/timeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:text="10:20 pm" />
+
+                <TextView
+                    android:id="@+id/patientNameLabelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/patient_name"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/patientNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:text="Nitheesh AG"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/doctorNoteLabelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/doctor_note"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/doctorNoteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="10sp"
+                    android:maxLength="50"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:text="Have asthma problems and taking XYZ tablets"
+                    tools:visibility="visible" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/actionButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <View
+                android:id="@+id/actionButtonLayoutDivider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentTop="true"
+                android:background="#989797" />
+
+            <TextView
+                android:id="@+id/completeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/complete"
+                android:textColor="@color/button_primary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:gravity="end|center_vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/callButtonImage"
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/login_icon"
+                    android:src="@drawable/call" />
+
+                <TextView
+                    android:id="@+id/callTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/call"
+                    android:textColor="@color/button_primary" />
+
+                <ImageView
+                    android:id="@+id/navigateButtonImage"
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:contentDescription="@string/login_icon"
+                    android:src="@drawable/nav" />
+
+                <TextView
+                    android:id="@+id/navigateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/navigate"
+                    android:textColor="@color/button_primary" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

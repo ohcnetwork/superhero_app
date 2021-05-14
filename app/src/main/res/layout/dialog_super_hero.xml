@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="#F1F1F1"
+            android:src="@drawable/hero_illustration"
+            android:contentDescription="@string/illustration" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:padding="16dp"
+            android:text="@string/thankyou_super_hero"
+            />
+
+        <View
+            android:id="@+id/actionButtonLayoutDivider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#989797" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            >
+            <ImageView
+                android:id="@+id/likeButtonImage"
+                android:layout_width="18dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/thumbs_up"
+                android:contentDescription="@string/login_icon" />
+            <TextView
+                android:id="@+id/okayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/okay"
+                android:textColor="@color/button_primary"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

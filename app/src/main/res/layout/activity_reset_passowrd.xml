@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context="kerala.superhero.app.login.LoginActivity">
+
+        <EditText
+            android:id="@+id/resetPasswordPhoneNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40sp"
+            android:autofillHints="phone"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/getOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resetPasswordPhoneNumberEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24sp"
+            android:background="@drawable/button_bg"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/send_otp"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/otpEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/getOtp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/enter_otp"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/resetPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otpEditText"
+            android:layout_marginTop="24dp"
+            android:autofillHints="password"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/new_password"
+            android:inputType="textPassword"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/resetConfirmPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resetPasswordEditText"
+            android:layout_marginTop="24dp"
+            android:autofillHints="password"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:padding="16dp" />
+
+
+        <LinearLayout
+            android:id="@+id/resetPasswordButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resetConfirmPasswordEditText"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/resetPasswordButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="16dp"
+                android:text="@string/reset_password"
+                android:textColor="@color/button_primary"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/resetPasswordButtonImage"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/login_icon"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:src="@drawable/login_rounded_right" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/loginLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resetPasswordButtonLayout"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/login"
+            android:textColor="@color/button_primary"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</ScrollView>
